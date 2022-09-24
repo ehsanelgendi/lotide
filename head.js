@@ -4,12 +4,11 @@ const assertEqual = function(actual, expected) {
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
-  head([1,2,3]);
 };
 
 const head = function(array) {
   return array[0];
-}
+};
 
 // TEST CODE
 assertEqual("Lighthouse Labs", "Bootcamp");
