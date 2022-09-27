@@ -24,13 +24,13 @@ const flatten = function(array) {
     if (Array.isArray(element)) {
       element.forEach(function(value) {
         output.push(value);
-      })
+      });
     } else {
       output.push(element);
     }
   });
   return output;
-}
+};
 
 console.log(flatten([1, 2, [3, 4], 5, [6]]));
 assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
