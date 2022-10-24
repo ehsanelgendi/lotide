@@ -3,12 +3,10 @@ const eqObjects = require('../eqObjects');
 
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
-//console.log(eqObjects(ab, ba)); // => true
-assertEqual(eqObjects(ab, ba), true);
+assertEqual(eqObjects(ab, ba), true); // => true
 
 const abc = { a: "1", b: "2", c: "3" };
-//console.log(eqObjects(ab, abc)); // => false
-assertEqual(eqObjects(ab, abc), false);
+assertEqual(eqObjects(ab, abc), false); // => false
 
 //TEST CODE "ARRAY"
 const cd = { c: "1", d: ["2", 3] };
@@ -17,3 +15,7 @@ assertEqual(eqObjects(cd, dc), true); // => true
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
 assertEqual(eqObjects(cd, cd2), false); // => false
+
+const abTest = {a: [1], b: 2};
+const abTest2 = {a: [1], b: 3};
+assertEqual(eqObjects(abTest, abTest2), false); // => false
