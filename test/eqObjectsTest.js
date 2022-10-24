@@ -1,21 +1,22 @@
-const assertEqual = require('../assertEqual');
-const eqObjects = require('../eqObjects');
+const assert = require('chai').assert;
+const _ = require('../index');
 
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-assertEqual(eqObjects(ab, ba), true); // => true
 
-const abc = { a: "1", b: "2", c: "3" };
-assertEqual(eqObjects(ab, abc), false); // => false
 
-//TEST CODE "ARRAY"
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObjects(cd, dc), true); // => true
-
-const cd2 = { c: "1", d: ["2", 3, 4] };
-assertEqual(eqObjects(cd, cd2), false); // => false
-
-const abTest = {a: [1], b: 2};
-const abTest2 = {a: [1], b: 3};
-assertEqual(eqObjects(abTest, abTest2), false); // => false
+describe("#eqObjects", () => {
+  it("returns true if objects are equal", () => {
+    assert.deepEqual(_.eqObjects({ a: "1", b: "2" }, { b: "2", a: "1" }), true);
+  });
+  it("returns false if objects lentgh not equal", () => {
+    assert.deepEqual(_.eqObjects({ a: "1", b: "2" }, { a: "1", b: "2", c: "3" }), false);
+  });
+  it("returns true if objects match, including objects with arrays", () => {
+    assert.deepEqual(_.eqObjects({ c: "1", d: ["2", 3] }, { d: ["2", 3], c: "1" }), true);
+  });
+  it("returns false if objects don't match, including objects with arrays", () => {
+    assert.deepEqual(_.eqObjects({ c: "1", d: ["2", 3] }, { c: "1", d: ["2", 3, 4] }), false);
+  });
+  it("returns false if objects don't match, including objects with arrays, first element is array", () => {
+    assert.deepEqual(_.eqObjects({a: [1], b: 2}, {a: [1], b: 3}), false);
+  });
+});
