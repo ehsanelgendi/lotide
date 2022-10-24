@@ -3,10 +3,10 @@ const findKeyByValue = require('../findKeyByValue');
 
 describe("#findKeyByValue", () => {
   const bestTVShowsByGenre = {
-    sci_fi: "The Expanse",
+    sciFi: "The Expanse",
     comedy: "Brooklyn Nine-Nine",
     horror: "",
-    drama:  "The Wire"
+    drama: "The Wire"
   };
 
   it("returns genre 'drama' when passed object and movie name 'The Wire'", () => {

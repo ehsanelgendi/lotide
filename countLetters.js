@@ -1,8 +1,8 @@
-const countLetters = function(inputstring) {
+const countLetters = function(inputString) {
   const results = {};
-  for (const letter of inputstring) {
-    if(letter !== " "){
-      if(results[letter]) {
+  for (const letter of inputString) {
+    if (letter !== " ") {
+      if (results[letter]) {
         results[letter] += 1;
       } else {
         results[letter] = 1;

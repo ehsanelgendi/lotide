@@ -12,4 +12,4 @@ describe('#takeUntil', () => {
     assert.deepEqual(takeUntil(data2, x => x === ','), ["I've", 'been', 'to', 'Hollywood']);
   });
 
-})
+});

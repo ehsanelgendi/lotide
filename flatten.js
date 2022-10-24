@@ -1,8 +1,8 @@
-const flatten = function(array) {
+const flatten = function (array) {
   let output = [];
-  array.forEach(function(element) {
+  array.forEach(function (element) {
     if (Array.isArray(element)) {
-      element.forEach(function(value) {
+      element.forEach(function (value) {
         output.push(value);
       });
     } else {

@@ -1,12 +1,12 @@
-const takeUntil = function(array, callback) {
+const takeUntil = function (array, callback) {
   const results = [];
   for (let item of array) {
-    if (! callback(item)) {
+    if (!callback(item)) {
       results.push(item);
     } else {
       break;
     }
-    
+
   }
   return results;
 }
