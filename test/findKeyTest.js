@@ -1,5 +1,6 @@
 const assert = require('chai').assert;
-const findKey = require('../findKey');
+const _ = require('../index');
+
 
 describe("#findKey", () => {
   let names = {
@@ -11,9 +12,9 @@ describe("#findKey", () => {
     "Akelarre": { stars: 3 }
   };
   it('returns (noma) from object names with cb (x => x.stars === 2)', () => {
-    assert.strictEqual(findKey(names, x => x.stars === 2), "noma");
+    assert.strictEqual(_.findKey(names, x => x.stars === 2), "noma");
   });
   it('returns (undefined) from object names with cb (x => x.stars === 2) if cb functions returns nothing', () => {
-    assert.strictEqual(findKey(names, x => x.stars === 5), undefined);
+    assert.strictEqual(_.findKey(names, x => x.stars === 5), undefined);
   });
 });

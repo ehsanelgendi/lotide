@@ -1,14 +1,14 @@
 const assert = require('chai').assert;
-const without = require('../without');
+const _ = require('../index');
 
 describe("#without", () => {
   it("returns [2, 3] when passes [1, 2, 3], [1]", () => {
-    assert.deepEqual(without([1, 2, 3], [1]), [2, 3]);
+    assert.deepEqual(_.without([1, 2, 3], [1]), [2, 3]);
   });
   it("returns ['1', '2'] when passes ['1', '2', '3'], [1, 2, '3']", () => {
-    assert.deepEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
+    assert.deepEqual(_.without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
   });
   it("[ 'hello', 'world' ] when passed ['hello', 'world', 'lighthouse'], ['lighthouse']", () => {
-    assert.deepEqual(without(["hello", "world", "lighthouse"], ["lighthouse"]), ["hello", "world"]);
+    assert.deepEqual(_.without(["hello", "world", "lighthouse"], ["lighthouse"]), ["hello", "world"]);
   });
 });

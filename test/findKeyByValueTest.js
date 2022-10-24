@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const findKeyByValue = require('../findKeyByValue');
+const _ = require('../index');
 
 describe("#findKeyByValue", () => {
   const bestTVShowsByGenre = {
@@ -10,12 +10,12 @@ describe("#findKeyByValue", () => {
   };
 
   it("returns genre 'drama' when passed object and movie name 'The Wire'", () => {
-    assert.strictEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+    assert.strictEqual(_.findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
   });
   it("returns genre 'horror' when passed object and movie name as empty string", () => {
-    assert.strictEqual(findKeyByValue(bestTVShowsByGenre, ""), "horror");
+    assert.strictEqual(_.findKeyByValue(bestTVShowsByGenre, ""), "horror");
   });
   it("returns genre undefined when passed object and movie name as a space", () => {
-    assert.strictEqual(findKeyByValue(bestTVShowsByGenre, " "), undefined);
+    assert.strictEqual(_.findKeyByValue(bestTVShowsByGenre, " "), undefined);
   });
 });
