@@ -1,4 +1,5 @@
-const head = function (array) {
+//function takes an array and returns the first element
+const head = function(array) {
   return array[0];
 };
 
