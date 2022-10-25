@@ -26,22 +26,17 @@ This project was created and published by me as part of my learnings at Lighthou
 
 The following functions are currently implemented:
 
-* `assertArraysEqual`: Asserts whether two arrays are equal
-* `assertEqual`: Asserts whether two primitive values are equal
-* `asserObjectEqual`: Asserts whether two objects are equal
-* `eqArrays`: Compares the data of two arrays to check if they are equal to each other
-* `eqObjects`: Compares the data of two objects to check if they are equal to each other
-#
-
-* `countLetters`: Returns an object where each unique character encountered in a given string is a key and the value for that property should be the number of occurrences for that character
-* `countOnly`: Given an array and an object, it will return an object containing counts of everything that the input object listed and was contained in the array as well
-* `findKey`: Takes an object and a callback and return the first key for which the callback returns a truthy value. If no key is found, then it should return undefined
+* `eqArrays`: Compares the data of two arrays to check if they are equal to each other.
+* `eqObjects`: Compares the data of two objects to check if they are equal to each other.
+* `countLetters`: Takes in a sentence and returns a count of each of the letters in the sentence.
+* `countOnly`: Given an array and an object, it will return an object containing counts of everything that the input object listed and was contained in the array.
+* `findKey`: Takes in an object and a value and returns the first key that corresponds to that value.
 * `findKeyByValue`: Takes an object and a value and returns the first key which contains the given value. If no key with that given value is found, it returns undefined
-* `flatten`: Given an array containing other nested arrays, it flattens it into a single-level array
-* `head`: Returns the first item in the array
-* `letterPositions`: Returns an object containing each characters as keys and as values all the indices in the string where each character is found
-* `map`: Returns a new array based on the results of the callback function
-* `middle`: Returns an array with only the middle element(s) of the provided array, a single middle element for odd arrays and two middle elements for even arrays
-* `tail`: Returns the "tail" of an array: everything except for the first item (head) of the provided array
-* `takeUntil`: Returns a "slice of the array with elements taken from the beginning." It should keep going until the callback returns a truthy value
-* `without`: Takes an array and an itemsToRemove array. It should return a new array with only the elements from source that are not present in the itemsToRemove array
+* `flatten`: Takes in an array that contains elements including nested array of elements and returns a flattened version of the array.
+* `head`: Takes in an array and returns the first element in the array
+* `letterPositions`: Takes in a string and returns all indices of letter positions in the string.
+* `map`: Takes in an array and a callback and returns a new array based on the results of the callback on each item in the array.
+* `middle`: Takes in an array and returns middle most element of the array.
+* `tail`: Takes in an array and returns everything except the first element of the array.
+* `takeUntil`: Takes in an array and callback and returns a slice of the array based on the criteria specified in the callback.
+* `without`: Takes in a source array and an itemsToRemove arrays and returns only the items from the source array that are not in the itemsToRemove array.
