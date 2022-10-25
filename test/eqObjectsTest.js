@@ -1,8 +1,7 @@
 const assert = require('chai').assert;
 const _ = require('../index');
 
-
-
+//test function
 describe("#eqObjects", () => {
   it("returns true if objects are equal", () => {
     assert.deepEqual(_.eqObjects({ a: "1", b: "2" }, { b: "2", a: "1" }), true);

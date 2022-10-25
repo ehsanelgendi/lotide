@@ -1,6 +1,7 @@
 const assert = require('chai').assert;
 const _ = require('../index');
 
+//test function
 describe("#eqArrays", () => {
   it("should returns true if arrays are equal", () => {
     assert.strictEqual(_.eqArrays([1,2,3], [1,2,3]), true);

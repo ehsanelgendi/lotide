@@ -1,6 +1,7 @@
 const assert = require('chai').assert;
 const _ = require('../index');
 
+//test function
 const firstNames = [
   "Karl",
   "Salima",

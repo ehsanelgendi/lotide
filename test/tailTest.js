@@ -1,6 +1,7 @@
 const assert = require('chai').assert;
 const _ = require('../index');
 
+//test function
 describe("#tail", () => {
   const words = ["Yo Yo", "Lighthouse", "Labs"];
   it("returns 3 for words.length", () => {

@@ -1,6 +1,7 @@
 const assert = require('chai').assert;
 const _ = require('../index');
 
+//test function
 describe('#letterPositions', () => {
   it("returns [0] for letter 'h' in a string 'hello'", () => {
     assert.deepEqual(_.letterPositions("hello").h, [0]);

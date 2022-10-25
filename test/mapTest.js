@@ -1,6 +1,7 @@
 const assert = require('chai').assert;
 const _ = require('../index');
 
+//test function
 describe("#map", () => {
   const words = ["ground", "control", "to", "major", "tom"];
 
